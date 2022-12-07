@@ -2,6 +2,7 @@ const { firebaseConfig } = require('./config.json')
 const { red } = require('colors')
 const { db } = require('../index')
 
+
 db.connect(firebaseConfig)
 
 db.events.on('connect', () => {
