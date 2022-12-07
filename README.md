@@ -2,7 +2,7 @@
    Database-coffee
 </h1>
 
-# ⭐ Supported databases
+# 🔗 Supported databases
 - [firebase-admin](https://github.com/firebase/firebase-admin-node)
 
 # ⭐ Features
