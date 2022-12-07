@@ -1,6 +1,6 @@
 {
   "name": "database-coffee",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Connect to databases from several different sources by node.js",
   "main": "index.js",
   "directories": {
