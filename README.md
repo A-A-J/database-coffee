@@ -3,7 +3,7 @@
 </h1>
 
 # ⭐ Supported databases
-- (firebase-admin)[https://github.com/firebase/firebase-admin-node]
+- [firebase-admin](https://github.com/firebase/firebase-admin-node)
 
 # ⭐ Features
 - Very very very smooth, when you initialize databases for your project.
