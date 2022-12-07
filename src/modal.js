@@ -105,6 +105,12 @@ class modal{
         }
     }
 
+    /**
+     * 
+     * @param {*} data Data must be entered
+     * @param {*} id document name
+     * @returns more https://firebase.google.com/docs/firestore/manage-data/add-data#data_types
+     */
     async set(data, id){
         try {
             if (!data) throw `You must enter array data! ${id}`;
@@ -124,24 +130,40 @@ class modal{
         }
     }
 
-    async get(table, guild_id){
+    /**
+     * 
+     * @param {*} id document name
+     * @returns more https://firebase.google.com/docs/firestore/query-data/get-data#get_a_document
+     */
+    async get(id){
         try {
-            const getData = await this.db.collection(table).doc(guild_id).get();
-            if (!getData.exists) throw `There is no table [${guild_id}]`;
+            const getData = await this.collection.data.doc(id).get();
+            if (!getData.exists) throw `There is no table >${id}<`;
             return getData.data()
         } catch (error) {
             database.events.emit('error', error)
         }
     }
     
-    async delete(guild_id){
+    /**
+     * 
+     * @param {*} id document name
+     * @returns more https://firebase.google.com/docs/firestore/manage-data/delete-data#delete_documents
+     */
+    async delete(id){
         try {
-            return await this.collection.doc(guild_id).delete();
+            return await this.collection.doc(id).delete();
         } catch (er) {
             database.events.emit('error', er)
         }
     }
 
+    /**
+     * 
+     * @param {*} id document name
+     * @param {*} data Data must be entered
+     * @returns more https://firebase.google.com/docs/firestore/manage-data/add-data#update-data
+     */
     async update(id, data){
         try {
             const up = this.collection.doc(id);

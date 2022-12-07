@@ -14,6 +14,10 @@
     "mysql",
     "firebase"
   ],
-  "author":"Abdulelah, Discord: coffee#9708",
-  "license": "ISC"
+  "author": "Abdulelah, Discord: coffee#9708",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "firebase-admin": "^11.3.0"
+  }
 }

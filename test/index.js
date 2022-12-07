@@ -1,19 +1,19 @@
+const { firebaseConfig } = require('./config.json')
 const { red } = require('colors')
-// const { Client, GatewayIntentBits } = require('discord.js')
-const { firebaseConfig } = require('../../config.json')
-const { db } = require('../run')
+const { db } = require('../index')
+
 db.connect(firebaseConfig)
 
 db.events.on('connect', () => {
     console.log('connect')
 })
+
 db.events.on('error', (er) => {
     console.error(red(er))
 })
 
-const Guild = require('./schemas/guild')
 
-// const client = new Client({ intents: 1 });
+const Guild = require('./schemas/guild')
 
 (async () => {
     let getData = await Guild.findOne('1024041353933508719', true);

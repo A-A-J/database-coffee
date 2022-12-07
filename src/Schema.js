@@ -2,7 +2,7 @@ class Schema {
     constructor(...args) {
         this.data = args;
     }
-    getAll() {
+    get() {
         let schemaData = {};
         for (let opp of this.data) {
             for (let key of Object.keys(opp)) {
@@ -19,11 +19,6 @@ class Schema {
             }
             return schemaData;
         }
-    }
-    
-    get() {
-        const data = this.getAll();
-        return data;
     }
 }
 
