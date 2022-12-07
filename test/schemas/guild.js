@@ -1,4 +1,5 @@
-const { Model, Schema } = require('../../run')
+const { Model, Schema } = require('../../index')
+
 const guildsSchema = new Schema({
 	_create:		{type: "object", default: new Date()},
 	_premium:		{type: "string", default: false},

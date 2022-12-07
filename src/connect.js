@@ -1,5 +1,4 @@
 const firebase_coffee = exports;
-require('colors')
 const process = require('node:process')
 const { initializeApp, cert } = require('firebase-admin/app');
 const { getFirestore } = require('firebase-admin/firestore');
@@ -12,7 +11,7 @@ firebase_coffee.events = new EventEmitter();
  * @param {*} option Use >alert< command that hides the appearance of connection success in console
  * @returns more https://firebase.google.com/docs/reference/js/v8/firebase
  */
-firebase_coffee.connect = async function(config, option = []) {
+firebase_coffee.connect = async function(config, option = [], type_data='firebase') {
     try {
         
         if(!config || !config.credential || !config.databaseURL) throw 'config data must be added to connect to the database\n [credential], [databaseURL] in config.json';

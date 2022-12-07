@@ -1,7 +1,7 @@
 {
   "name": "database-coffee",
-  "version": "1.0.2",
-  "description": "Connect to databases from several different sources by node.js",
+  "version": "1.0.3",
+  "description": "Fast and smooth connection to all popular databases by node.js only",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -19,8 +19,11 @@
   ],
   "author": "Abdulelah, Discord: coffee#9708",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/A-A-J/database-coffee"
+  },
   "dependencies": {
-    "colors": "^1.4.0",
     "firebase-admin": "^11.3.0"
   }
 }

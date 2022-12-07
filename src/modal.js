@@ -1,4 +1,3 @@
-require('colors');
 const database = require('./connect')
 
 class modal{
@@ -31,6 +30,7 @@ class modal{
     async filters(data, updata=false){
         try {
             if (!data) throw "You must enter array data!";
+            
             this.boxData = []
 
             Object.keys(data).filter((g) => {
@@ -55,10 +55,11 @@ class modal{
                 }
                 
             }
+            
             return this.Schema.data;
+        
         } catch (err) {
             database.events.emit('error', err)
-            // process.exit(1)
         }
     }
 
@@ -71,10 +72,15 @@ class modal{
     async findOne(search, check=false){
         try {
             if(!search) throw "That document ( id ) is invalid!";
+            
             const doc = await this.collection.doc(search).get();
+            
             if(!doc.exists && check == true) return
+            
             if(!doc.exists && check == false) throw `id ${search} is not in database`
+            
             return doc.data()
+        
         } catch (error) {
             database.events.emit('error', error)
         }
@@ -91,17 +97,24 @@ class modal{
     async findAll(field, value, typeWhere='==', checkMsg=false){
         try {
             this.getf = []
+            
             const check = await this.collection.where(field, typeWhere, value);
+            
             const getData = await check.get();
+            
             if(getData.empty && checkMsg == true) return
+            
             if (getData.empty) throw 'No matching documents.';
+            
             getData.forEach((e) => {
                 this.getf.push(e.data())
+            
             })
+            
             return this.getf;
+        
         } catch (error) {
             database.events.emit('error', error)
-            // process.exit(1)
         }
     }
 
@@ -114,17 +127,26 @@ class modal{
     async set(data, id){
         try {
             if (!data) throw `You must enter array data! ${id}`;
+            
             if(typeof id != 'string' ) throw `The value of id must be a String ${id}`
+            
             const check = await this.findOne(id, true);
+            
             data = await this.filters(data);
+            
             const set_in_database = await this.collection.doc(id)
+            
             if(!check){
                 data['_id'] = set_in_database.id;
                 set_in_database.set(data)
             }
+            
             const get = await set_in_database.get()
+            
             if(!get.exists) return
+            
             return get.data()
+        
         } catch (err) {
             database.events.emit('error', err)
         }
@@ -138,8 +160,11 @@ class modal{
     async get(id){
         try {
             const getData = await this.collection.data.doc(id).get();
+            
             if (!getData.exists) throw `There is no table >${id}<`;
+            
             return getData.data()
+        
         } catch (error) {
             database.events.emit('error', error)
         }
@@ -167,10 +192,15 @@ class modal{
     async update(id, data){
         try {
             const up = this.collection.doc(id);
+            
             const get = await up.get();
+            
             if(!get.exists) throw `id ${id} not is in database!`;
+            
             const datad = await this.filters(data, true);
+            
             return await up.update(data)
+        
         } catch (er) {
             database.events.emit('error', er)
         }
