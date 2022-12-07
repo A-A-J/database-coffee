@@ -1,0 +1,19 @@
+{
+  "name": "database-coffee",
+  "version": "1.0.0",
+  "description": "Connect to databases from several different sources by node.js",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "database",
+    "mysql",
+    "firebase"
+  ],
+  "author":"Abdulelah, Discord: coffee#9708",
+  "license": "ISC"
+}
