@@ -23,12 +23,12 @@ git clone https://github.com/A-A-J/database-coffee.git
 
 # ❓How to used?
 Full use added inside [text](https://github.com/A-A-J/database-coffee/tree/master/test) folder
-- firebase
-   1 - [set](https://github.com/A-A-J/database-coffee/blob/master/test/firebase/set.js)
-   2 - [findOne](https://github.com/A-A-J/database-coffee/blob/master/test/firebase/findOne.js)
-   3 - [findAll](https://github.com/A-A-J/database-coffee/blob/master/test/firebase/findAll.js)
-   4 - [update](https://github.com/A-A-J/database-coffee/blob/master/test/firebase/update.js)
-   5 - [delete](https://github.com/A-A-J/database-coffee/blob/master/test/firebase/delete.js)
+> firebase
+   - [set](https://github.com/A-A-J/database-coffee/blob/master/test/firebase/set.js)
+   - [findOne](https://github.com/A-A-J/database-coffee/blob/master/test/firebase/findOne.js)
+   - [findAll](https://github.com/A-A-J/database-coffee/blob/master/test/firebase/findAll.js)
+   - [update](https://github.com/A-A-J/database-coffee/blob/master/test/firebase/update.js)
+   - [delete](https://github.com/A-A-J/database-coffee/blob/master/test/firebase/delete.js)
 
 # 💭 Contact us | Support
 
