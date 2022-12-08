@@ -5,10 +5,14 @@
 # 🔗 Supported databases
 - [firebase-admin](https://github.com/firebase/firebase-admin-node)
 
-# ⭐ Features
-- Very very very smooth, when you initialize databases for your project.
+# ⭐ But Why ?
 
-# 🖥️ How to install ?
+- Smooth in use
+- No need to use too many texts
+- Supports databases with the same structure used in the project.
+
+# 📕 Setup
+
 ```js
 npm install database-coffee
 ```
@@ -16,6 +20,18 @@ or
 ```js
 git clone https://github.com/A-A-J/database-coffee.git
 ```
-# 💭 communicate
-For help or to solve problems you can through my private server in Discord
-https://discord.gg/NhdHGMEJP7
+
+# ❓How to used?
+Full use added inside [text](https://github.com/A-A-J/database-coffee/tree/master/test) folder
+- firebase
+   1 - [set](https://github.com/A-A-J/database-coffee/blob/master/test/firebase/set.js)
+   2 - [findOne](https://github.com/A-A-J/database-coffee/blob/master/test/firebase/findOne.js)
+   3 - [findAll](https://github.com/A-A-J/database-coffee/blob/master/test/firebase/findAll.js)
+   4 - [update](https://github.com/A-A-J/database-coffee/blob/master/test/firebase/update.js)
+   5 - [delete](https://github.com/A-A-J/database-coffee/blob/master/test/firebase/delete.js)
+
+# 💭 Contact us | Support
+
+<a href="https://discord.gg/NhdHGMEJP7">
+<img src="https://media.discordapp.net/attachments/997268939287580712/1050346019591819274/image.png">
+</a>
