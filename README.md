@@ -8,11 +8,14 @@
 # ⭐ Features
 - Very very very smooth, when you initialize databases for your project.
 
-# 📕 Setup
+# 🖥️ How to install ?
 ```js
 npm install database-coffee
 ```
-
+or
+```js
+git clone https://github.com/A-A-J/database-coffee.git
+```
 # 💭 communicate
 For help or to solve problems you can through my private server in Discord
 https://discord.gg/NhdHGMEJP7
