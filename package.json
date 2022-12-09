@@ -1,6 +1,6 @@
 {
   "name": "database-coffee",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Fast and smooth connection to all popular databases by node.js only.",
   "main": "index.js",
   "directories": {
