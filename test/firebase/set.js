@@ -1,10 +1,10 @@
 //require
-const { firebaseConfig } = require('../config.json');
+const { db } = require('../config.json');
 const { db } = require('../../index');
 const Guild = require('../schemas/guild');
 
 //Connect to databases
-db.connect(firebaseConfig);
+db.connect(db);
 
 //Read logs
 db.events.on('connect', () => console.log('connect') );
